@@ -9,7 +9,6 @@ app.geometry("800x450")
 app.title("CleanMyKeyboard")
 app.resizable(False, False)
 
-# Grid config
 for col in range(3):
     app.columnconfigure(col, weight=1)
 
@@ -43,7 +42,7 @@ def keyboard_callback(proxy, event_type, event, refcon):
         Quartz.kCGEventKeyDown,
         Quartz.kCGEventKeyUp
     ):
-        return None  # BLOCK key
+        return None  
     return event
 
 
